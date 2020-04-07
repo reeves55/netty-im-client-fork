@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.google.protobuf', name: 'protobuf-java', version: '3.11.4'
+    compile group: 'com.alibaba', name: 'fastjson', version: '1.2.62'
+    compile 'io.netty:netty-all:4.1.13.Final'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
